@@ -1908,7 +1908,7 @@ static s32 _DrvFwCtrlSelfParsePacket(u8 *pPacket, u16 nLength, SelfTouchInfo_t *
                     szY[i] = pInfo->tPoint[i].nY;
                 }
 			
-                if (/*(pInfo->nFingerNum == 1)&&*/(nPrevTouchNum == 2))
+                if(nPrevTouchNum == 2) /*(pInfo->nFingerNum == 1)&&*/
                 {
                     if (_DrvFwCtrlPointDistance(szX[0], szY[0], szPrevX[0], szPrevY[0]) > _DrvFwCtrlPointDistance(szX[0], szY[0], szPrevX[1], szPrevY[1]))
                     {
@@ -2185,7 +2185,7 @@ static s32 _DrvFwCtrlSelfParsePacket(u8 *pPacket, u16 nLength, SelfTouchInfo_t *
                     szY[i] = pInfo->tPoint[i].nY;
                 }
 			
-                if (/*(pInfo->nFingerNum == 1)&&*/(nPrevTouchNum == 2))
+                if (nPrevTouchNum == 2) /*(pInfo->nFingerNum == 1)&&*/
                 {
                     if (_DrvFwCtrlPointDistance(szX[0], szY[0], szPrevX[0], szPrevY[0]) > _DrvFwCtrlPointDistance(szX[0], szY[0], szPrevX[1], szPrevY[1]))
                     {
