@@ -1174,7 +1174,7 @@ static int fg_get_property(struct power_supply *psy, enum power_supply_property 
 	case POWER_SUPPLY_PROP_CURRENT_NOW:
 		mutex_lock(&bq->data_lock);
 		fg_read_current(bq, &bq->batt_curr);
-		val->intval = -bq->batt_curr * 1000;
+		val->intval = bq->batt_curr * 1000;
 		pr_info("bq27426 current=%d\n", val->intval);
 		mutex_unlock(&bq->data_lock);
 		break;
