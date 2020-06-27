@@ -115,7 +115,7 @@ struct vreg_config {
 	int ua_load;
 };
 
-static const struct vreg_config const vreg_conf[] = {
+static const struct vreg_config vreg_conf[] = {
 	{ "vdd", 2800000UL, 2800000UL, 10, },
 };
 
